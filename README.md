@@ -1,6 +1,6 @@
 <h1 align="center">Density Suppression Plugin</h1>
 <p align="center">
-  <a href="https://github.com/Fallen-Networks/ModerationToolbox/actions" target="_blank"><img src="https://github.com/Fallen-Networks/ModerationToolbox/workflows/Build/badge.svg?branch=master&event=push" /></a>
+  <a href="https://github.com/Fallen-Networks/DensitySuppression/actions" target="_blank"><img src="https://github.com/Fallen-Networks/ModerationToolbox/workflows/Build/badge.svg?branch=master&event=push" /></a>
   <a href="https://discord.gg/fallennetworks" target="_blank"><img src="https://img.shields.io/discord/261260904656535552?logo=discord" /></a>
 </p>
 <p align="center">A 5M resource written in C# for density suppression and getting rid of server build-up that if left un-tamed leads to world geometry breaking and smaller LOD models.</p>
