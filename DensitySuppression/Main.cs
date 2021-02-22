@@ -125,6 +125,13 @@ namespace DensitySuppression.Client
             API.SetCreateRandomCopsNotOnScenarios(false);
         }
 
+        [Tick]
+        internal async Task ClearDistantLowLODVehicles()
+        {
+            await Delay(0);
+            API.SetDistantCarsEnabled(false);
+            API.SetFarDrawVehicles(false);
+        }
 
         [Tick]
         internal async Task SuppressModels()
