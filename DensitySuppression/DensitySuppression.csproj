@@ -5,17 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="CitizenFX.Core">
-      <HintPath>..\..\..\Users\lucas\Downloads\FiveM\FiveM.app\citizen\clr2\lib\mono\4.5\CitizenFX.Core.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Other\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="CitizenFX.Core.Client">
-      <HintPath>..\..\..\Users\lucas\Downloads\FiveM\FiveM.app\citizen\clr2\lib\mono\4.5\CitizenFX.Core.Client.dll</HintPath>
+      <HintPath>..\Other\CitizenFX.Core.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Common.Client.net">
-      <HintPath>..\..\..\Users\lucas\Documents\Essentials.Geneva.Client.net.dll</HintPath>
+    <Reference Include="CitizenFX.Core">
+      <HintPath>..\Other\CitizenFX.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\Users\lucas\Downloads\Json120r3\Bin\net20\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Essentials.Geneva.Client.net">
+      <HintPath>..\Other\Essentials.Geneva.Client.net.dll</HintPath>
     </Reference>
   </ItemGroup>
 
