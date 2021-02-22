@@ -240,7 +240,11 @@ namespace DensitySuppression.Client
             "WORLD_VEHICLE_MILITARY_PLANES_BIG",
             "CODE_HUMAN_POLICE_CROWD_CONTROL",
             "CODE_HUMAN_POLICE_INVESTIGATE",
-            "WORLD_HUMAN_COP_IDLES"
+            "WORLD_HUMAN_COP_IDLES",
+            "WORLD_HUMAN_GUARD_STAND_ARMY",
+            "PROP_HUMAN_MUSCLE_CHIN_UPS_ARMY",
+            "WORLD_FISH_FLEE",
+            "WORLD_FISH_IDLE"
         };
 
         private readonly List<string> _scenarioGroups = new List<string>
