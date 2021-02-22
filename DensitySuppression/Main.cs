@@ -77,6 +77,7 @@ namespace DensitySuppression.Client
             {
                 Log.Error(ex);
             }
+
         }
         [Tick]
         internal async Task ClearAudio()
@@ -112,7 +113,6 @@ namespace DensitySuppression.Client
             await Delay(0);
             API.SetGarbageTrucks(false);
             API.SetRandomBoats(false);
-            API.SetCreateRandomCopsNotOnScenarios(false);
             var pos = Game.PlayerPed.Position;
             API.ClearAreaOfVehicles(pos.X, pos.Y, pos.Z, 1000, false, false, false, false, false);
             API.RemoveVehiclesFromGeneratorsInArea(pos.X - 500.0F, pos.Y - 500.0F, pos.Z - 500.0F, pos.X + 500.0F, pos.Y + 500.0F, pos.Z + 500.0F, 0);
@@ -122,8 +122,6 @@ namespace DensitySuppression.Client
         internal async Task ClearDispatch()
         {
             await Delay(100);
-            API.SetGarbageTrucks(false);
-            API.SetRandomBoats(false);
             API.SetCreateRandomCopsNotOnScenarios(false);
         }
 
