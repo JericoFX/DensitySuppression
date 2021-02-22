@@ -73,17 +73,17 @@ namespace DensitySuppression.Client
                     Tick += ClearTraffic;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                Debug.WriteLine("Error: Config file failed to load!");
+                Log.Error(ex);
             }
-
         }
         [Tick]
         internal async Task ClearAudio()
         {
             API.StartAudioScene("CHARACTER_CHANGE_IN_SKY_SCENE");
         }
+
 
         [Tick]
         internal async Task DisableDispatch()
