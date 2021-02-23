@@ -1,4 +1,4 @@
-fx_version 'adamant'
+fx_version 'cerulean'
 games { 'gta5' }
 
 files {
@@ -6,6 +6,6 @@ files {
 }
 
 client_scripts {
-	'Essentials.FN.Client.net.dll', // this has yet to be re-built aka im lazy and will do it later so I can actually include it 
+	'Essentials.FN.Client.net.dll',
 	'DensitySuppression.Client.net.dll'
 }
