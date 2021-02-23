@@ -15,7 +15,7 @@
       <HintPath>..\Other\CitizenFX.Core.dll</HintPath>
     </Reference>
     <Reference Include="Essentials.FN.Client.net">
-      <HintPath>..\Other\EEssentials.FN.Client.net.dll</HintPath>
+      <HintPath>..\Other\Essentials.FN.Client.net.dll</HintPath>
     </Reference>
   </ItemGroup>
 
