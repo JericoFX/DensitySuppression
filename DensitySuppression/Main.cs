@@ -63,14 +63,30 @@ namespace DensitySuppression.Client
             try
             {
                 config = JsonConvert.DeserializeObject<ConfigModel>(data);
-                if (config.Dispatch)
+                if (config.ClearRandomCops)
                 {
 
-                    Tick += ClearDispatch;
+                    Tick += ClearRandomCops;
                 }
                 if (config.Traffic)
                 {
                     Tick += ClearTraffic;
+                }
+                if (config.ClearAudio)
+                {
+                    Tick += ClearAudio;
+                }
+                if (config.ClearDispatch)
+                {
+                    Tick += ClearDispatch;
+                }
+                if (config.ClearModels)
+                {
+                    Tick += ClearModels;
+                }
+                if (config.ClearScenarioTypes)
+                {
+                    Tick += ClearScenarioTypes;
                 }
             }
             catch (Exception ex)
@@ -87,7 +103,7 @@ namespace DensitySuppression.Client
 
 
         [Tick]
-        internal async Task DisableDispatch()
+        internal async Task ClearDispatch()
         {
             for (int i = 0; i < 16; i++)
             {
@@ -119,14 +135,14 @@ namespace DensitySuppression.Client
         }
 
         [Tick]
-        internal async Task ClearDispatch()
+        internal async Task ClearRandomCops()
         {
             await Delay(100);
             API.SetCreateRandomCopsNotOnScenarios(false);
         }
 
         [Tick]
-        internal async Task ClearDistantLowLODVehicles()
+        internal async Task ClearLowLODVehicles()
         {
             await Delay(0);
             API.SetDistantCarsEnabled(false);
@@ -134,7 +150,7 @@ namespace DensitySuppression.Client
         }
 
         [Tick]
-        internal async Task SuppressModels()
+        internal async Task ClearModels()
         {
             foreach (string model in this._modelsToSuppress)
             {
@@ -144,7 +160,7 @@ namespace DensitySuppression.Client
         }
 
         [Tick]
-        internal async Task DisableScenarioTypes()
+        internal async Task ClearScenarioTypes()
         {
             foreach (string scenarioType in this._scenarioTypes)
             {
@@ -154,7 +170,7 @@ namespace DensitySuppression.Client
         }
 
         [Tick]
-        internal async Task DisableScenarioGroups()
+        internal async Task ClearScenarioGroups()
         {
             foreach (string scenarioGroup in this._scenarioGroups)
             {
@@ -164,7 +180,7 @@ namespace DensitySuppression.Client
         }
 
         [Tick]
-        internal async Task DeleteBlacklistedVehicles()
+        internal async Task ClearBlacklistedVehicles()
         {
             World.GetAllVehicles().ToList<Vehicle>().ForEach(async delegate (Vehicle v)
             {

@@ -1,4 +1,11 @@
 ﻿{
-  "Dispatch": false,
-  "Traffic": false,
+  "ClearDispatch": false,
+  "ClearTraffic": false,
+  "ClearLowLODModels": false,
+  "ClearCops": false,
+  "ClearRandomCops": false,
+  "ClearAudio": false,
+  "ClearScenarioTypes": false,
+  "ClearScenarioGroups": false,
+  "ClearBlacklistedVehicles": false
 }
