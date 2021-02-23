@@ -128,7 +128,6 @@ namespace DensitySuppression.Client
         {
             await Delay(0);
             API.SetGarbageTrucks(false);
-            API.SetRandomBoats(false);
             var pos = Game.PlayerPed.Position;
             API.ClearAreaOfVehicles(pos.X, pos.Y, pos.Z, 1000, false, false, false, false, false);
             API.RemoveVehiclesFromGeneratorsInArea(pos.X - 500.0F, pos.Y - 500.0F, pos.Z - 500.0F, pos.X + 500.0F, pos.Y + 500.0F, pos.Z + 500.0F, 0);
@@ -138,7 +137,16 @@ namespace DensitySuppression.Client
         internal async Task ClearRandomCops()
         {
             await Delay(100);
+            API.SetCreateRandomCops(false);
             API.SetCreateRandomCopsNotOnScenarios(false);
+            API.SetCreateRandomCopsOnScenarios(false);
+        }
+
+        [Tick]
+        internal async Task PlayerSettings()
+        {
+            await Delay(0);
+            API.SetMaxWantedLevel(0);
         }
 
         [Tick]
