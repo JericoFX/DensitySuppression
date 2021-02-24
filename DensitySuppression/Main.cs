@@ -152,14 +152,6 @@ namespace DensitySuppression.Client
         }
 
         [Tick]
-        internal async Task ClearLowLODVehicles()
-        {
-            await Delay(0);
-            API.SetDistantCarsEnabled(false);
-            API.SetFarDrawVehicles(false);
-        }
-
-        [Tick]
         internal async Task ClearModels()
         {
             foreach (string model in this._modelsToSuppress)
