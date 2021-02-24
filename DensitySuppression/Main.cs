@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using static CitizenFX.Core.Native.API;
 
+#pragma warning disable CS1998 // This async method lacks 'await' operators and will run synchronously.
+
 namespace DensitySuppression.Client
 {
     public class Main : ClientScript
